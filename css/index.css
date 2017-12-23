@@ -1,6 +1,12 @@
+
+
 .red{
     color: red !important;
     fill: pink !important;
+}
+
+.transparent {
+  background: none;
 }
 
 .big {
