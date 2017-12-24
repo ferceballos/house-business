@@ -2,88 +2,82 @@
 <html lang="en">
 
 <head>
-    <title>Hello, world!</title>
+    <title>Work</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-        crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="ionicons/css/ionicons.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 
-<body>
-    <!-- Image and text -->
-    <nav class="navbar navbar-light transparent">
-        <div class="container ">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt=""> Your Brand
-            </a>
-            <div>
-                <div class="row">
-                    <i class="center icon icolink col ion-social-twitter"></i>
-                    <i class="center icon icolink col ion-social-github"></i>
-                    <i class="center icon icolink col ion-social-facebook"></i>
-                    <span class="col"></span>
-                    <button class="btn btn-outline-primary">Go Pro!</button>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="header-cover ">
+        <!-- Image and text -->
+        <nav class="navthings navbar navbar-toggleable-sm navbar-trans navbar-inverse">
+            <div class="container" id="title">
+                <a class="navbar-brand" href="#">
+                    <!-- <i class="icon ion-ios-wineglass pr-3"></i>Airbnb -->
+                     <i class="icon ion-bonfire pr-3 big icon-blue"></i>
+                </a>
+                <div>
+
+                    <button class="btn btn-linky p-0 m-2" onclick="hey()">Regístrate</button>
+
+                    <button class="btn btn-linky p-0 m-2" ng-click="hello()">Inicia sesión</button>
+
                 </div>
+
+
+
             </div>
+        </nav>
+        <br><br>
+        <div class="header-message container m-4 p-4 center fadeInUp">
+            <h1 class="text-primary title pb-4 mid"> Airbnb</h1>
+            <h2 class="pb-4 subtitle">Reserva alojamientos y experiencias especiales alrededor del mundo.   </h2>
 
 
 
+
+            <div class="input-group ">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="form-control-lg btn btn-light dropdown-toggle" data-toggle="dropdown">
+                        <span id="search_concept">Filtrar por</span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <button class="m-1 btn btn-outline-secondary" href="#contains">Cualquiera</button>
+                        </li>
+                        <li>
+                            <button class="m-1 btn btn-outline-secondary" href="#its_equal">En venta</button>
+                        </li>
+                        <li>
+                            <button class="m-1 btn btn-outline-secondary" href="#greather_than">En renta</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <input type="hidden" name="search_param" value="all" id="search_param">
+                <input type="text" class=" form-control-lg form-control" name="x" placeholder="Search term...">
+                <span class="input-group-btn">
+                    <button id="searchBtn" class="btn btn-primary form-control-lg"  type="button">
+                        <i class="icon ion-android-search"></i>
+                    </button>
+                </span>
+            </div>
         </div>
-    </nav>
-
-    <div class="cover">
 
     </div>
 
-    <div id="cover" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="w-100" src="img/cent.jpeg" alt="First slide">
-                <div class="carousel-caption d-md-block text-dark text-left up p-4 ">
-                    <h1 class="text-primary pb-4 ">Your Brand</h1>
-                    <h3 class="pb-4">Lorem ipsum dolor sit amet, cupiditate rerum.</h3>
- 
-
-
-
-                    <div class="input-group ">
-                        <div class="input-group-btn search-panel">
-                            <button type="button" class="form-control-lg btn btn-light dropdown-toggle" data-toggle="dropdown">
-                                <span id="search_concept">Filter by</span>
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <button class="m-1 btn btn-outline-primary" href="#contains">Cualquiera</button>
-                                </li>
-                                <li>
-                                    <button class="m-1 btn btn-outline-primary" href="#its_equal">En venta</button>
-                                </li>
-                                <li>
-                                    <button class="m-1 btn btn-outline-primary" href="#greather_than">En renta</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <input type="hidden" name="search_param" value="all" id="search_param">
-                        <input type="text" class="form-control-lg form-control" name="x" placeholder="Search term...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary form-control-lg" type="button">
-                                <i class="icon ion-android-search"></i>
-                            </button>
-                        </span>
-                    </div>
-
-
-
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="more" class="container">
         <div class="card-deck m-4 p-4">
@@ -131,34 +125,69 @@
         </div>
 
     </div>
+    <br>
+    <div class="divider">
 
+    </div>
+    <div class="container foot-container">
+        <div class="row foot-content">
 
-    <nav class="navbar navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt=""> Your Brand
-            </a>
-            <div>
-                <div class="row">
-                    <i class="center icon icolink col ion-social-twitter"></i>
-                    <i class="center icon icolink col ion-social-github"></i>
-                    <i class="center icon icolink col ion-social-facebook"></i>
-                    <span class="col"></span>
-                    <button class="btn btn-outline-primary">Go Pro!</button>
-                </div>
+            <div class="col m-4">
+                <p class="foot-title">Your Brand</p>
+                <a class="foot-link" href="http://">Sobre nosotros</a>
+                <a class="foot-link" href="http://">Empleo</a>
+                <a class="foot-link" href="http://">Políticas</a>
+                <a class="foot-link" href="http://">Ayuda</a>
+            </div>
+
+            <div class="col m-4">
+                <h5 class="foot-title">Descrube</h5>
+                <a class="foot-link" href="http://">Confianza y seguridad</a>
+                <a class="foot-link" href="http://">Renta de propiedades</a>
+                <a class="foot-link" href="http://">Compra de propiedades</a>
+
+            </div>
+
+            <div class="col m-4">
+                <h5 class="foot-title">Registrarse</h5>
+                <a class="foot-link" href="http://">Página de registro</a>
+                <a class="foot-link" href="http://">Iniciar sesión</a>
+                <a class="foot-link" href="http://">Hospitalidad</a>
+                <a class="foot-link" href="http://">Centro de la comunidad</a>
             </div>
 
 
 
         </div>
-    </nav>
+
+
+
+    </div>
+    <div class="container foot-container">
+        <div class="row foot-content navbar">
+
+            <div>
+                <div class="row foot-link">
+                    <i class="center icon icolink col ion-social-twitter"></i>
+                    <i class="center icon icolink col ion-social-github"></i>
+                    <i class="center icon icolink col ion-social-facebook"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
@@ -168,16 +197,19 @@
 
     </script>
 </body>
-<script>
+<script type="text/javascript">
+        $(document).ready( function ( ) {
+            console.log('ready')
+            function hey() {
+                console.log('getting into function')
+                $('#title').removeClass('fadeInUp');
+                $('#title').addClass('fadeInUp');
+            };
+        });
+
+
     $('#myCarousel').carousel({
         // Options
-    });
-
-    $(function () {
-        $('a[href*=#]').on('click', function (e) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
-        });
     });
 </script>
 
