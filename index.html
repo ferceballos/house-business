@@ -10,7 +10,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="ionicons/css/ionicons.css">
@@ -22,54 +22,47 @@
     <div class="header-cover ">
         <!-- Image and text -->
         <nav class="navthings navbar navbar-toggleable-sm navbar-trans navbar-inverse">
-            <div class="container" id="title">
-                <a class="navbar-brand" href="#">
+            <div class="container animated" id="header">
+                <a class="navbar-brand " href="index.html">
                     <!-- <i class="icon ion-ios-wineglass pr-3"></i>Airbnb -->
-                     <i class="icon ion-bonfire pr-3 big icon-blue"></i>
+                    <i class="icon ion-bonfire pr-3 big icon-blue text-primary"></i>
                 </a>
                 <div>
-
-                    <button class="btn btn-linky p-0 m-2" onclick="hey()">Regístrate</button>
-
-                    <button class="btn btn-linky p-0 m-2" ng-click="hello()">Inicia sesión</button>
-
+                    <a class="btn btn-linky p-0 m-2" href="signup.html">Regístrate</a>
+                    <a class="btn btn-linky p-0 m-2" href="login.html" ng-click="hello()">Inicia sesión</a>
                 </div>
-
-
-
             </div>
         </nav>
-        <br><br>
+        <br>
+        <br>
         <div class="header-message container m-4 p-4 center fadeInUp">
-            <h1 class="text-primary title pb-4 mid"> Airbnb</h1>
-            <h2 class="pb-4 subtitle">Reserva alojamientos y experiencias especiales alrededor del mundo.   </h2>
-
-
-
+            <h1 class="text-primary title pb-4 mid animated" id='title'>Airbnb</h1>
+            <h2 class="pb-4 subtitle animated" id='subtitle'>Reserva alojamientos y experiencias especiales alrededor del mundo. </h2>
 
             <div class="input-group ">
                 <div class="input-group-btn search-panel">
-                    <button type="button" class="form-control-lg btn btn-light dropdown-toggle" data-toggle="dropdown">
+                    <button type="button" class="form-control-lg btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
                         <span id="search_concept">Filtrar por</span>
                         <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu" role="menu">
+                    <ul class="dropdown-menu animated" role="menu" id="dropdown-menu">
                         <li>
-                            <button class="m-1 btn btn-outline-secondary" href="#contains">Cualquiera</button>
+                            <button class="m-1 btn btn-outline-dark" href="#contains">Cualquiera</button>
                         </li>
                         <li>
-                            <button class="m-1 btn btn-outline-secondary" href="#its_equal">En venta</button>
+                            <button class="m-1 btn btn-outline-dark" href="#its_equal">En venta</button>
                         </li>
                         <li>
-                            <button class="m-1 btn btn-outline-secondary" href="#greather_than">En renta</button>
+                            <button class="m-1 btn btn-outline-dark" href="#greather_than">En renta</button>
                         </li>
                     </ul>
                 </div>
 
                 <input type="hidden" name="search_param" value="all" id="search_param">
-                <input type="text" class=" form-control-lg form-control" name="x" placeholder="Search term...">
+                <input type="text" class=" form-control-lg form-control" name="x" placeholder="Cualquier lugar">
                 <span class="input-group-btn">
-                    <button id="searchBtn" class="btn btn-primary form-control-lg"  type="button">
+                    <button id="searchBtn" class="btn btn-primary form-control-lg" type="button">
                         <i class="icon ion-android-search"></i>
                     </button>
                 </span>
@@ -198,14 +191,14 @@
     </script>
 </body>
 <script type="text/javascript">
-        $(document).ready( function ( ) {
-            console.log('ready')
-            function hey() {
-                console.log('getting into function')
-                $('#title').removeClass('fadeInUp');
-                $('#title').addClass('fadeInUp');
-            };
-        });
+    $(document).ready(function () {
+        console.log('ready')
+        function hey() {
+            console.log('getting into function')
+            $('#title').removeClass('fadeInUp');
+            $('#title').addClass('fadeInUp');
+        };
+    });
 
 
     $('#myCarousel').carousel({
