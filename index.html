@@ -29,7 +29,7 @@
                 </a>
                 <div>
                     <a class="btn btn-linky p-0 m-2" href="signup.html">Regístrate</a>
-                    <a class="btn btn-linky p-0 m-2" href="login.html" ng-click="hello()">Inicia sesión</a>
+                    <a class="btn btn-linky p-0 m-2" href="#" data-toggle="modal" data-target="#exampleModalCenter">Inicia sesión</a>
                 </div>
             </div>
         </nav>
@@ -171,6 +171,47 @@
     </div>
 
 
+    <!-- Login modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Iniciar sesión</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="login-card card-container">
+                            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+                            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                            <p id="profile-name" class="profile-name-card"></p>
+                            <form class="form-signin">
+                                <span id="reauth-email" class="reauth-email"></span>
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Correo" required autofocus>
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+
+                                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Iniciar sesión</button>
+                            </form>
+
+                            <div class="liner m-3">
+                            </div>
+
+                            <div class="row">
+                                <p class="col">¿No tienes una cuenta?</p>
+                                <a class="col text-left " href="#">Regístrate</a>
+                            </div>
+
+                        </div>
+                        <!-- /card-container -->
+                    </div>
+                    <!-- /container -->
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
