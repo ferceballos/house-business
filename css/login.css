@@ -121,3 +121,18 @@ body {
 .forgot-password:hover, .forgot-password:active, .forgot-password:focus {
     color: rgb(12, 97, 33);
 }
+
+/* Hover effect on links */
+.btn-linky::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+.btn-linky::after {
+    width: 100%;
+    transition: width .3s;
+}
